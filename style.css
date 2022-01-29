@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+ul li {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  flex-grow: 0;
+}
+
+.task {
+  flex-grow: 1;
+}
+
+.delete-btn {
+  flex-grow: 0;
+}
+
+input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+}
