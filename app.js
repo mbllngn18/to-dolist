@@ -2,8 +2,8 @@ const addList = document.getElementById("task-list");
 const addTask = document.getElementById("add-task-button");
 let input = document.getElementById("input-task");
 let itemsArray = localStorage.getItem('items')
-    ? JSON.parse(localStorage.getItem('items'))
-    : [];
+  ? JSON.parse(localStorage.getItem('items'))
+  : [];
 
 localStorage.setItem('items', JSON.stringify(itemsArray));
 const data = JSON.parse(localStorage.getItem('items'));
@@ -12,6 +12,7 @@ const createTask = (task) => {
     let newTask = document.createElement("li");
     let type = document.createElement("input");
     type.setAttribute("type", "checkbox");
+    type.setAttribute("id", "check");
     let text = document.createElement("span");
     text.className = "task";
     text.textContent = task;
